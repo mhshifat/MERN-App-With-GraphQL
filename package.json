@@ -1,0 +1,36 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "A MERN Stack App With GraphQL Server",
+  "main": "server.js",
+  "engines": {
+    "node": "10.9.0",
+    "npm": "6.4.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "back-server": "node-dev --notify=false server",
+    "install-all": "npm install && npm install --prefix=client",
+    "client-server": "npm start --prefix=client",
+    "server": "npm-run-all -p dev-server client-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhshifat/MERN-App-With-GraphQL.git"
+  },
+  "author": "Mehedi Hassan Shifat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mhshifat/MERN-App-With-GraphQL/issues"
+  },
+  "homepage": "https://github.com/mhshifat/MERN-App-With-GraphQL#readme",
+  "dependencies": {
+    "colors": "^1.3.2",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.0.2",
+    "mongoose": "^5.3.11"
+  }
+}
